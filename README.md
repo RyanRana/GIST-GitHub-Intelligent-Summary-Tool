@@ -68,12 +68,12 @@ The architecture of GIST is based on a modular design to ensure scalability and 
    ```bash
    git clone https://github.com/yourusername/GIST.git
    cd GIST
-nstall the dependencies:
+2. **Install the dependencies:**
+  ```bash
+  Copy code
+  pip install -r requirements.txt
 
-bash
-Copy code
-pip install -r requirements.txt
-Set up the OpenAI API key:
+3. **Set up the OpenAI API key:**
 
 bash
 Copy code
