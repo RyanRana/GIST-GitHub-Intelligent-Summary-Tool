@@ -2,7 +2,7 @@
 
 ## Overview
 
-GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any GitHub repository. By simply inputting a repository URL, users can access information such as repository stars, collaborators, commit histories, and more. Additionally, GIST integrates a chatbox powered by OpenAI's GPT, enabling users to ask questions about the repository and receive intelligent responses. The tool also features graphical and data representations of the repository's details.
+GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any GitHub repository. By simply inputting a repository URL, users can access information such as repository stars, collaborators, commit histories, and more. Additionally, GIST integrates a chatbox powered by OpenAI's GPT, enabling users to ask questions about the repository and receive intelligent responses. The tool also features graphical and data representations of the repository's details. With GIST, navigating GitHub repositories has never been easier or more insightful.
 
 ## Features
 
