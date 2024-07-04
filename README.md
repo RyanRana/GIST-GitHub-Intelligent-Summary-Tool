@@ -32,23 +32,19 @@ GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any
    
 2. **Install the dependencies:**
    ```bash
-   Copy code
    pip install -r requirements.txt
    
 3. **Set up the OpenAI API key:**
 
    ```bash
-   Copy code
    export OPENAI_API_KEY='your-openai-api-key'
 
 4. **Run the backend server:**
-  ```bash
-   Copy code
-   python backend.py
+   ```bash
+     python backend.py
 
 5. **Run the Streamlit app:**
-  ```bash
-   Copy code
-   streamlit run streamlit_app.py
-
-Open your browser and go to: http://localhost:8501
+   ```bash
+     streamlit run streamlit_app.py
+      
+6. **Open your browser and go to:** http://localhost:8501
