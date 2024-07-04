@@ -13,30 +13,6 @@ GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any
 - Provide a chatbox powered by OpenAI's GPT for user queries.
 - Graphical representation of repository details (e.g., stars over time, commit frequency).
 
-## Requirements
-
-### Must Have
-- Ability to input a GitHub repository URL.
-- Display repository stars.
-- List repository collaborators.
-- Show commit histories.
-- Provide a chatbox powered by OpenAI's GPT for user queries.
-- Graphical representation of repository details.
-
-### Should Have
-- User authentication for personalized experience.
-- Detailed statistics on repository issues and pull requests.
-- Notifications for repository updates.
-
-### Could Have
-- Integration with other version control platforms (e.g., GitLab, Bitbucket).
-- Advanced analytics on code quality and repository health.
-- Customizable dashboards for different user roles.
-
-### Won't Have
-- Hosting of GitHub repositories.
-- Code editing capabilities within the tool.
-
 ## Architecture Overview
 
 The architecture of GIST is based on a modular design to ensure scalability and maintainability. The main components are:
@@ -92,3 +68,35 @@ The architecture of GIST is based on a modular design to ensure scalability and 
    ```bash
    git clone https://github.com/yourusername/GIST.git
    cd GIST
+nstall the dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Set up the OpenAI API key:
+
+bash
+Copy code
+export OPENAI_API_KEY='your-openai-api-key'
+Run the backend server:
+
+bash
+Copy code
+python backend.py
+Run the Streamlit app:
+
+bash
+Copy code
+streamlit run streamlit_app.py
+Open your browser and go to:
+
+arduino
+Copy code
+http://localhost:8501
+Usage
+Input the GitHub repository URL in the text box.
+View the displayed repository stars, collaborators, and commit histories.
+Check the graphical representations of repository data.
+Use the chatbox to ask questions about the repository.
+Contributing
+Contributions are welcome! Please fork the repository and create a pull request.
