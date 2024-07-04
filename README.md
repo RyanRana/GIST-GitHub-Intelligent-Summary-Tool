@@ -1,1 +1,1 @@
-# GENIE-GitHub-Enhanced-Navigator-Insight-Engine
+# GIST: GitHub's Intelligent Summary Tool
