@@ -27,24 +27,17 @@ GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/GIST.git
-   cd GIST
-   
-   
+   cd GIST  
 2. **Install the dependencies:**
    ```bash
    pip install -r requirements.txt
-   
 3. **Set up the OpenAI API key:**
-
    ```bash
    export OPENAI_API_KEY='your-openai-api-key'
-
 4. **Run the backend server:**
    ```bash
      python backend.py
-
 5. **Run the Streamlit app:**
    ```bash
      streamlit run streamlit_app.py
-      
 6. **Open your browser and go to:** http://localhost:8501
