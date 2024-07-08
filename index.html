@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with GIST</title>
+    <style>
+        #chatbox {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        #message {
+            width: 300px;
+            padding: 10px;
+        }
+        #plot {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox"></div>
+    <input type="text" id="message" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+    <br>
+    <input type="text" id="repo-url" placeholder="Enter GitHub repo URL" />
+    <button onclick="fetchRepoData()">Fetch Repo Data</button>
+    <div id="plot"></div>
+
+    <script>
+        async function sendMessage() {
+            const message = document.getElementById('message').value;
+            const chatbox = document.getElementById('chatbox');
+
+            // Display the user's message
+            chatbox.innerHTML += `<div><b>You:</b> ${message}</div>`;
+
+            // Send the message to the server
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+
+            const data = await response.json();
+            const assistant_reply = data.response;
+
+            // Display the assistant's reply
+            chatbox.innerHTML += `<div><b>GIST:</b> ${assistant_reply}</div>`;
+
+            // Clear the input field
+            document.getElementById('message').value = '';
+
+            // Scroll to the bottom of the chatbox
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function fetchRepoData() {
+            const repoUrl = document.getElementById('repo-url').value;
+
+            // Send the repo URL to the server
+            const response = await fetch('/repo', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ repo_url: repoUrl })
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            // Visualize the data
+            const visualizeResponse = await fetch('/visualize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const visualizeData = await visualizeResponse.json();
+            const plot = document.getElementById('plot');
+            plot.innerHTML = `<img src="${visualizeData.plot_url}" />`;
+        }
+    </script>
+</body>
+</html>
