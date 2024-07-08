@@ -41,3 +41,9 @@ GIST: GitHub's Intelligent Summary Tool provides comprehensive insights into any
    ```bash
      streamlit run streamlit_app.py
 6. **Open your browser and go to:** http://localhost:8501
+
+Run the Flask server:
+bash
+Copy code
+python server.py
+Open your web browser and navigate to http://127.0.0.1:5000/ to interact with the chatbox and fetch GitHub repository data.
